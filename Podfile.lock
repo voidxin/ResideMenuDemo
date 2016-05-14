@@ -1,0 +1,13 @@
+PODS:
+  - Masonry (1.0.0)
+  - RESideMenu (4.0.7)
+
+DEPENDENCIES:
+  - Masonry
+  - RESideMenu (~> 4.0.7)
+
+SPEC CHECKSUMS:
+  Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
+  RESideMenu: f24c508404b49c667344c54aba7e590883533958
+
+COCOAPODS: 0.39.0

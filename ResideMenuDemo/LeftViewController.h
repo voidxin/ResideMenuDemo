@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  LeftViewController.h
 //  ResideMenuDemo
 //
 //  Created by 张新 on 16/5/14.
@@ -7,11 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Masonry.h"
 #import "RESideMenu.h"
-@interface AppDelegate : UIResponder <UIApplicationDelegate,RESideMenuDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface LeftViewController : UIViewController
 
 @end
-

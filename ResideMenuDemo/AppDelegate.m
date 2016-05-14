@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
+#import "HomePageController.h"
+#import "RightViewController.h"
+#import "LeftViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window setBackgroundColor:[UIColor whiteColor]];
+    HomePageController *homePageVC=[[HomePageController alloc]init];
+    UINavigationController *navigatioinController=[[UINavigationController alloc]initWithRootViewController:homePageVC];
+    LeftViewController *leftVC=[[LeftViewController alloc]init];
+    RightViewController *rightVC=[[RightViewController alloc]init];
+    RESideMenu *sideMenu=[[RESideMenu alloc]initWithContentViewController:navigatioinController leftMenuViewController:leftVC rightMenuViewController:rightVC];
+    
+    sideMenu.parallaxEnabled = NO;
+    sideMenu.scaleContentView = YES;
+    sideMenu.contentViewScaleValue = 0.95;
+    sideMenu.scaleMenuView = NO;
+    sideMenu.contentViewShadowEnabled = YES;
+    sideMenu.contentViewShadowRadius = 4.5;
+    self.window.rootViewController=sideMenu;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
